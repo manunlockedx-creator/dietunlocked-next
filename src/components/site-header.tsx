@@ -9,10 +9,10 @@ export function SiteHeader() {
           <Image
             src="/manunlocked-wordmark.png"
             alt="ManUnlocked"
-            width={104}
+            width={24}
             height={24}
             priority
-            className="h-auto w-[96px] sm:w-[104px]"
+            className="h-6 w-6 rounded-sm object-contain"
           />
         </Link>
         <nav className="flex items-center gap-5 text-sm font-medium text-zinc-400">
