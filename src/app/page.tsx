@@ -9,16 +9,12 @@ export default function Home() {
   return (
     <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-6 py-20">
       <section className="space-y-12">
-        <div className="space-y-5">
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-amber-500">
-            Evidence-first men&apos;s health
-          </p>
+        <div className="space-y-4">
           <h1 className="max-w-5xl text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-            Clearer answers for testosterone, telehealth, labs, and the stuff most men get sold instead of taught.
+            Men&apos;s health without the bullshit.
           </h1>
-          <p className="max-w-3xl text-xl leading-9 text-zinc-400">
-            ManUnlocked is built for men who want evidence-first guidance, practical tools, and transparent reviews,
-            without the fake urgency and lazy affiliate sludge.
+          <p className="max-w-3xl text-2xl leading-8 text-zinc-400">
+            Tools, research, and transparent reviews.
           </p>
         </div>
 
