@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     template: "%s | ManUnlocked",
   },
   description: siteConfig.description,
+  verification: {
+    google: "GccoXHnJ_6B2SZsRUjg-cs4UXf6cYJorC3EDVpQSzqI",
+  },
 };
 
 export default function RootLayout({
