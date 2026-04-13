@@ -67,7 +67,7 @@ export default async function ArticlePage({ params }: PageProps) {
           <span>Published {frontmatter.publishDate}</span>
           {frontmatter.medicalReviewer ? <span>Medical review: {frontmatter.medicalReviewer}</span> : null}
         </div>
-        <div className="mt-10 prose prose-invert max-w-none prose-p:my-6 prose-p:text-[18px] prose-p:leading-8 prose-headings:font-semibold prose-headings:tracking-tight prose-h2:mt-16 prose-h2:mb-6 prose-h2:block prose-h2:rounded-xl prose-h2:border-l-4 prose-h2:border-amber-500 prose-h2:bg-white/[0.03] prose-h2:px-4 prose-h2:py-3 prose-h2:text-4xl prose-h2:text-white prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-2xl prose-h3:text-white prose-a:text-amber-400 prose-strong:text-white prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6 prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6 prose-li:my-2 prose-li:text-[17px] prose-li:leading-8 prose-li:marker:text-zinc-500 prose-blockquote:border-l-2 prose-blockquote:border-amber-500 prose-blockquote:pl-4 prose-blockquote:text-zinc-300 [&_.ftc-disclosure]:my-8 [&_.ftc-disclosure]:rounded-2xl [&_.ftc-disclosure]:border [&_.ftc-disclosure]:border-white/10 [&_.ftc-disclosure]:bg-white/5 [&_.ftc-disclosure]:px-5 [&_.ftc-disclosure]:py-4 [&_.ftc-disclosure]:text-sm [&_.ftc-disclosure]:leading-7 [&_.faq-question]:mt-8 [&_.faq-question]:mb-2 [&_.faq-question]:text-xl [&_.faq-question]:font-semibold [&_.faq-question]:text-white">
+        <div className="article-content mt-10 max-w-none">
           <MDXRemote source={content} options={{ mdxOptions: { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] } }} />
         </div>
       </article>
