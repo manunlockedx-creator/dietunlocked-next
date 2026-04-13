@@ -53,10 +53,7 @@ export default function Home() {
           <div className="space-y-6">
             <FreeTestosteroneCalculator />
             <section className="rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-2xl shadow-black/20">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">Featured video</p>
-              <h2 className="mt-3 text-xl font-semibold text-white">See the ManUnlocked vibe</h2>
-              <p className="mt-2 text-sm leading-7 text-zinc-400">Tap play for sound. It stays compact so the calculator still owns the hero.</p>
-              <div className="mt-4 flex justify-center">
+              <div className="flex justify-center">
                 <div className="w-full max-w-[300px] overflow-hidden rounded-[1.5rem] border border-white/10 bg-black shadow-lg shadow-black/30 sm:max-w-[320px] lg:max-w-[300px]">
                   <video
                     className="block aspect-[9/16] h-auto max-h-[560px] w-full bg-black object-cover"
