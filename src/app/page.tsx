@@ -50,8 +50,22 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
+          <div className="space-y-6">
             <FreeTestosteroneCalculator />
+            <section className="rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-2xl shadow-black/20">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">Featured video</p>
+              <h2 className="mt-3 text-xl font-semibold text-white">See the ManUnlocked vibe</h2>
+              <p className="mt-2 text-sm leading-7 text-zinc-400">Tap play for sound. It stays compact so the calculator still owns the hero.</p>
+              <video
+                className="mt-4 w-full rounded-2xl border border-white/10 bg-black"
+                controls
+                playsInline
+                preload="metadata"
+              >
+                <source src="/hero-video.mov" type="video/quicktime" />
+                Your browser does not support the video tag.
+              </video>
+            </section>
           </div>
         </div>
       </section>
