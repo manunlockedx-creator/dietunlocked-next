@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { ConvertKitForm } from "@/components/convertkit-form";
+import { FreeTestosteroneCalculator } from "@/components/free-testosterone-calculator";
 import { getAllArticles } from "@/lib/content";
 
 export default function Home() {
@@ -52,6 +54,11 @@ export default function Home() {
             Read article →
           </Link>
         </div>
+      </section>
+
+      <section className="mt-16 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <FreeTestosteroneCalculator />
+        <ConvertKitForm />
       </section>
     </main>
   );

@@ -11,8 +11,11 @@ export function SiteHeader() {
           <Link href="/blog" className="hover:text-zinc-950">
             Articles
           </Link>
-          <Link href="/affiliate-disclosure" className="hover:text-zinc-950">
-            Affiliate Disclosure
+          <Link href="/tools/free-testosterone-calculator" className="hover:text-zinc-950">
+            Calculator
+          </Link>
+          <Link href="/about" className="hover:text-zinc-950">
+            About
           </Link>
         </nav>
       </div>

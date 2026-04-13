@@ -3,7 +3,17 @@ import { getAllArticles } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages = ["", "/blog", "/affiliate-disclosure"];
+  const staticPages = [
+    "",
+    "/about",
+    "/blog",
+    "/contact",
+    "/affiliate-disclosure",
+    "/medical-disclaimer",
+    "/medical-review-team",
+    "/privacy-policy",
+    "/tools/free-testosterone-calculator",
+  ];
 
   const articlePages = getAllArticles()
     .filter((article) => article.frontmatter.status === "published")
