@@ -62,7 +62,7 @@ export default function Home() {
                 playsInline
                 preload="metadata"
               >
-                <source src="/hero-video.mov" type="video/quicktime" />
+                <source src="/hero-video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </section>
