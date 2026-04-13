@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-zinc-200 bg-white">
+    <footer className="border-t border-white/10 bg-[#05070a]">
       <div className="mx-auto flex max-w-6xl flex-col gap-5 px-6 py-8 text-sm text-zinc-500">
         <div className="flex flex-wrap gap-4">
           <Link href="/about">About</Link>

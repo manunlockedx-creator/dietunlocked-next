@@ -14,13 +14,13 @@ export default function BlogPage() {
   return (
     <main className="mx-auto flex w-full max-w-4xl flex-1 flex-col px-6 py-16">
       <div className="space-y-4">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-500">
           ManUnlocked Library
         </p>
-        <h1 className="text-4xl font-semibold tracking-tight text-zinc-950">
+        <h1 className="text-4xl font-semibold tracking-tight text-white">
           Articles that respect your time and your intelligence.
         </h1>
-        <p className="max-w-2xl text-lg leading-8 text-zinc-600">
+        <p className="max-w-2xl text-lg leading-8 text-zinc-400">
           No recycled listicles, no anonymous clinic advertorials, no fake certainty.
           Just practical guidance built around evidence, tradeoffs, and real decisions.
         </p>
@@ -28,12 +28,12 @@ export default function BlogPage() {
 
       <div className="mt-12 grid gap-6">
         {articles.map(({ frontmatter }) => (
-          <article key={frontmatter.slug} className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+          <article key={frontmatter.slug} className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-sm">
             <p className="text-sm text-zinc-500">{frontmatter.publishDate}</p>
-            <h2 className="mt-2 text-2xl font-semibold text-zinc-950">
+            <h2 className="mt-2 text-2xl font-semibold text-white">
               <Link href={`/${frontmatter.slug}`}>{frontmatter.title}</Link>
             </h2>
-            <p className="mt-3 text-base leading-7 text-zinc-600">{frontmatter.excerpt}</p>
+            <p className="mt-3 text-base leading-7 text-zinc-400">{frontmatter.excerpt}</p>
           </article>
         ))}
       </div>

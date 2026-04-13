@@ -7,8 +7,8 @@ export const metadata = {
 export default function AffiliateDisclosurePage() {
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-6 py-16">
-      <h1 className="text-4xl font-semibold tracking-tight text-zinc-950">Affiliate Disclosure</h1>
-      <div className="mt-6 space-y-5 text-lg leading-8 text-zinc-700">
+      <h1 className="text-4xl font-semibold tracking-tight text-white">Affiliate Disclosure</h1>
+      <div className="mt-6 space-y-5 text-lg leading-8 text-zinc-400">
         <p>
           ManUnlocked may earn a commission when you click certain links and sign up for a product or service.
           That does not change our editorial standards.

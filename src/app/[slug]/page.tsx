@@ -57,12 +57,12 @@ export default async function ArticlePage({ params }: PageProps) {
         faq={frontmatter.faq}
       />
 
-      <article className="prose prose-zinc max-w-none prose-headings:tracking-tight prose-a:text-amber-700">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+      <article className="prose prose-invert max-w-none prose-headings:tracking-tight prose-a:text-amber-400 prose-strong:text-white">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-500">
           {frontmatter.category}
         </p>
-        <h1 className="mt-3 text-5xl font-semibold text-zinc-950">{frontmatter.title}</h1>
-        <p className="text-xl leading-8 text-zinc-600">{frontmatter.excerpt}</p>
+        <h1 className="mt-3 text-5xl font-semibold text-white">{frontmatter.title}</h1>
+        <p className="text-xl leading-8 text-zinc-400">{frontmatter.excerpt}</p>
         <div className="flex flex-wrap gap-4 text-sm text-zinc-500">
           <span>Published {frontmatter.publishDate}</span>
           {frontmatter.medicalReviewer ? <span>Medical review: {frontmatter.medicalReviewer}</span> : null}

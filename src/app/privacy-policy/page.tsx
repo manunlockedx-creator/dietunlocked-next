@@ -6,8 +6,8 @@ export const metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-6 py-16">
-      <h1 className="text-4xl font-semibold tracking-tight text-zinc-950">Privacy Policy</h1>
-      <div className="mt-6 space-y-5 text-lg leading-8 text-zinc-700">
+      <h1 className="text-4xl font-semibold tracking-tight text-white">Privacy Policy</h1>
+      <div className="mt-6 space-y-5 text-lg leading-8 text-zinc-400">
         <p>
           We collect limited analytics and form submission data so the site can function, improve, and communicate
           with readers who explicitly opt in.

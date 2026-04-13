@@ -9,6 +9,8 @@ type Result = {
   category: "low" | "lownormal" | "optimal";
   label: string;
   interpretation: string;
+  ctaLabel?: string;
+  ctaHref?: string;
 };
 
 function vermeulenFreeT(totalT: number, shbg: number, albumin: number) {
@@ -48,6 +50,8 @@ function getResult(totalT: number, shbg: number, albumin: number): Result | null
       interpretation:
         `At ${base.freeT} ng/dL (${base.freePct}% of total), your estimated free testosterone is below the range most endocrinologists consider acceptable. ` +
         `That often lines up with symptoms like low libido, fatigue, weak recovery, and flat mood, especially if total testosterone is also low.`,
+      ctaLabel: "Compare TRT clinics that include lab work",
+      ctaHref: "/go/hims-trt",
     };
   }
 
@@ -59,6 +63,8 @@ function getResult(totalT: number, shbg: number, albumin: number): Result | null
       interpretation:
         `At ${base.freeT} ng/dL (${base.freePct}% of total), you're technically in range but still low enough that a symptomatic man could feel it. ` +
         `High-normal SHBG often makes this more misleading than total testosterone alone suggests.`,
+      ctaLabel: "Get a full hormone panel to confirm",
+      ctaHref: "/go/fella",
     };
   }
 
@@ -69,6 +75,8 @@ function getResult(totalT: number, shbg: number, albumin: number): Result | null
     interpretation:
       `At ${base.freeT} ng/dL (${base.freePct}% of total), your free testosterone estimate is in a healthier range. ` +
       `That does not automatically mean everything is perfect, but it makes frank androgen deficiency less likely.`,
+    ctaLabel: "How to maintain healthy testosterone naturally",
+    ctaHref: "/blog",
   };
 }
 
@@ -87,7 +95,7 @@ export function FreeTestosteroneCalculator() {
   }, [albumin, shbg, totalT]);
 
   return (
-    <section className="rounded-[2rem] border border-zinc-200 bg-[#0d1117] p-8 text-zinc-100 shadow-sm">
+    <section className="rounded-[2rem] border border-white/10 bg-[#0d1117] p-8 text-zinc-100 shadow-2xl shadow-black/30">
       <div className="mb-6 space-y-2">
         <h2 className="text-2xl font-semibold tracking-tight text-white">Free Testosterone Calculator</h2>
         <p className="max-w-2xl text-sm leading-6 text-zinc-400">
@@ -148,14 +156,14 @@ export function FreeTestosteroneCalculator() {
           <p className="mt-2 text-sm text-zinc-400">{parsed.freePct}% of your total testosterone is free.</p>
           <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-200">{parsed.interpretation}</p>
           <div className="mt-6 flex flex-col gap-3 text-sm font-medium sm:flex-row">
-            {parsed.category === "low" ? (
+            {parsed.ctaHref && parsed.ctaLabel ? (
               <AffiliateLink
-                href="/go/hims-trt"
-                offer="hims-trt"
-                sourcePage="/tools/free-testosterone-calculator"
+                href={parsed.ctaHref}
+                offer={parsed.category === "low" ? "hims-trt" : parsed.category === "lownormal" ? "fella" : "content"}
+                sourcePage="/"
                 className="rounded-full bg-white px-5 py-3 text-center text-zinc-950"
               >
-                Compare TRT options
+                {parsed.ctaLabel}
               </AffiliateLink>
             ) : null}
           </div>
