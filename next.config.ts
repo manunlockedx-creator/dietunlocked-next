@@ -5,6 +5,18 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/tools",
+        has: [{ type: "host", value: "manunlocked.com" }],
+        destination: "https://www.manunlocked.com/calculators",
+        permanent: true,
+      },
+      {
+        source: "/tools/:path*",
+        has: [{ type: "host", value: "manunlocked.com" }],
+        destination: "https://www.manunlocked.com/calculators/:path*",
+        permanent: true,
+      },
+      {
+        source: "/tools",
         destination: "/calculators",
         permanent: true,
       },
