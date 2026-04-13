@@ -20,7 +20,7 @@ export default function Home() {
 
         <div className="grid gap-8 lg:grid-cols-[2fr_1fr] lg:grid-rows-[auto_auto]">
           <article className="order-1 rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/20 lg:col-start-1 lg:row-start-1">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">Latest article</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">Featured</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white">
               {featuredArticle.frontmatter.title}
             </h2>
@@ -58,18 +58,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="order-3 grid gap-4 md:grid-cols-2 lg:col-start-1 lg:row-start-2">
-            {articles.slice(1).map(({ frontmatter }) => (
-              <article key={frontmatter.slug} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">Recent</p>
-                <h3 className="mt-3 text-xl font-semibold text-white">{frontmatter.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-zinc-400">{frontmatter.excerpt}</p>
-                <Link href={`/${frontmatter.slug}`} className="mt-4 inline-flex text-sm font-semibold text-amber-400">
-                  Read more →
-                </Link>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
