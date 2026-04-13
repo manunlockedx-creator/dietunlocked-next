@@ -63,8 +63,9 @@ export default async function ArticlePage({ params }: PageProps) {
         </p>
         <h1 className="mt-3 text-5xl font-semibold leading-tight text-white">{frontmatter.title}</h1>
         <p className="mt-5 text-xl leading-8 text-zinc-400">{frontmatter.excerpt}</p>
-        <div className="mt-5 flex flex-wrap gap-4 text-sm text-zinc-500">
-          <span>Published {frontmatter.publishDate}</span>
+        <div className="mt-5 flex flex-wrap items-center gap-2 text-sm text-zinc-500">
+          <span>Published {new Date(frontmatter.publishDate).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
+          {frontmatter.medicalReviewer ? <span aria-hidden="true">·</span> : null}
           {frontmatter.medicalReviewer ? <span>Medical review: {frontmatter.medicalReviewer}</span> : null}
         </div>
         <div className="article-content mt-10 max-w-none">
