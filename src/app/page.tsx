@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-6 py-20">
       <section className="space-y-12">
-        <div className="space-y-4">
-          <h1 className="max-w-5xl text-5xl font-semibold tracking-tight text-white sm:text-6xl">
+        <div className="space-y-4 text-center">
+          <h1 className="mx-auto max-w-5xl bg-gradient-to-r from-amber-300 via-orange-400 to-amber-500 bg-clip-text text-5xl font-semibold tracking-tight text-transparent sm:text-6xl">
             Men&apos;s health without the bullshit.
           </h1>
-          <p className="max-w-3xl text-2xl leading-8 text-zinc-400">
+          <p className="mx-auto max-w-3xl text-2xl leading-8 text-zinc-400">
             Tools, research, and transparent reviews.
           </p>
         </div>
