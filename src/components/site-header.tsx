@@ -22,7 +22,7 @@ export function SiteHeader() {
           <Link href="/blog" className="hover:text-white">
             Articles
           </Link>
-          <Link href="/tools" className="hover:text-white">
+          <Link href="/calculators" className="hover:text-white">
             Tools
           </Link>
           <Link href="/about" className="hover:text-white">

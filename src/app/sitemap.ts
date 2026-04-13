@@ -12,13 +12,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/medical-disclaimer",
     "/medical-review-team",
     "/privacy-policy",
-    "/tools",
-    "/tools/free-testosterone-calculator",
-    "/tools/low-t-symptom-checker",
-    "/tools/trt-cost-calculator",
-    "/tools/bioavailable-testosterone-calculator",
-    "/tools/testosterone-by-age-calculator",
-    "/tools/tdee-calculator-men",
+    "/calculators",
+    "/calculators/free-testosterone-calculator",
+    "/calculators/low-t-symptom-checker",
+    "/calculators/trt-cost-calculator",
+    "/calculators/bioavailable-testosterone-calculator",
+    "/calculators/testosterone-by-age-calculator",
+    "/calculators/tdee-calculator-men",
   ];
 
   const articlePages = getAllArticles()
