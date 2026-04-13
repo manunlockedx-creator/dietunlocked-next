@@ -1,9 +1,16 @@
 import Link from "next/link";
 import { FreeTestosteroneCalculator } from "@/components/free-testosterone-calculator";
+import { ConvertKitForm } from "@/components/convertkit-form";
 import { getAllArticles } from "@/lib/content";
 
+const sections = [
+  { key: "testosterone", title: "Testosterone & TRT", href: "/blog?category=testosterone" },
+  { key: "ed", title: "ED & Sexual Health", href: "/blog?category=ed" },
+  { key: "optimization", title: "Men’s Optimization", href: "/blog?category=optimization" },
+] as const;
+
 export default function Home() {
-  const articles = getAllArticles().slice(0, 3);
+  const articles = getAllArticles().filter((article) => article.frontmatter.status === "published");
   const featuredArticle = articles[0];
 
   return (
@@ -57,10 +64,58 @@ export default function Home() {
               </section>
             </div>
           </div>
-
         </div>
       </section>
 
+      <div className="my-16 h-px w-full bg-white/10" />
+
+      <section className="space-y-12">
+        {sections.map((section) => {
+          const sectionArticles = articles.filter((article) => article.frontmatter.category === section.key).slice(0, 4);
+          return (
+            <div key={section.key} className="space-y-6">
+              <div className="flex items-center justify-between gap-4">
+                <h2 className="text-3xl font-semibold tracking-tight text-white">{section.title}</h2>
+                <Link href={section.href} className="text-sm font-semibold text-amber-400">
+                  View all →
+                </Link>
+              </div>
+
+              <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+                {sectionArticles.length > 0 ? (
+                  sectionArticles.map(({ frontmatter }) => (
+                    <article key={frontmatter.slug} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">{frontmatter.publishDate}</p>
+                      <h3 className="mt-3 text-xl font-semibold text-white">{frontmatter.title}</h3>
+                      <p className="mt-3 text-sm leading-7 text-zinc-400">{frontmatter.excerpt}</p>
+                      <Link href={`/${frontmatter.slug}`} className="mt-4 inline-flex text-sm font-semibold text-amber-400">
+                        Read more →
+                      </Link>
+                    </article>
+                  ))
+                ) : (
+                  <div className="rounded-[1.5rem] border border-dashed border-white/10 bg-white/5 p-6 text-sm leading-7 text-zinc-500 md:col-span-2 xl:col-span-4">
+                    Articles in this category will appear here automatically as they&apos;re published.
+                  </div>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </section>
+
+      <section className="mt-16 rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/20">
+        <div className="space-y-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-500">Free protocol</p>
+          <h2 className="text-3xl font-semibold tracking-tight text-white">Get the free 7-Day Testosterone Protocol</h2>
+          <p className="max-w-2xl text-base leading-7 text-zinc-400">
+            A practical starter plan covering sleep, training, food, stress, and the mistakes that quietly wreck testosterone.
+          </p>
+        </div>
+        <div className="mt-6 max-w-xl">
+          <ConvertKitForm />
+        </div>
+      </section>
     </main>
   );
 }
