@@ -53,7 +53,7 @@ export default function Home() {
           <div className="space-y-6">
             <FreeTestosteroneCalculator />
             <section className="rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-2xl shadow-black/20">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">Featured video</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-300">FEATURED VIDEO</p>
               <div className="mt-4 flex justify-center">
                 <div className="w-full max-w-[300px] overflow-hidden rounded-[1.5rem] border border-white/10 bg-black shadow-lg shadow-black/30 sm:max-w-[320px] lg:max-w-[300px]">
                   <video
