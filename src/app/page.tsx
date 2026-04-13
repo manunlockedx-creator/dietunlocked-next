@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ConvertKitForm } from "@/components/convertkit-form";
 import { FreeTestosteroneCalculator } from "@/components/free-testosterone-calculator";
 import { getAllArticles } from "@/lib/content";
 
@@ -61,9 +60,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-16">
-        <ConvertKitForm />
-      </section>
     </main>
   );
 }
