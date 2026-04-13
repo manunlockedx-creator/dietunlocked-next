@@ -4,18 +4,18 @@ import Link from "next/link";
 export function SiteHeader() {
   return (
     <header className="border-b border-white/10 bg-[#05070a]/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         <Link href="/" className="flex items-center">
           <Image
             src="/manunlocked-wordmark.png"
             alt="ManUnlocked"
-            width={150}
-            height={34}
+            width={120}
+            height={28}
             priority
-            className="h-auto w-[132px] sm:w-[150px]"
+            className="h-auto w-[110px] sm:w-[120px]"
           />
         </Link>
-        <nav className="flex items-center gap-6 text-sm font-medium text-zinc-400">
+        <nav className="flex items-center gap-5 text-sm font-medium text-zinc-400">
           <Link href="/" className="hover:text-white">
             Home
           </Link>
