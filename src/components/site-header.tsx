@@ -16,8 +16,14 @@ export function SiteHeader() {
           />
         </Link>
         <nav className="flex items-center gap-6 text-sm font-medium text-zinc-400">
+          <Link href="/" className="hover:text-white">
+            Home
+          </Link>
           <Link href="/blog" className="hover:text-white">
             Articles
+          </Link>
+          <Link href="/tools/free-testosterone-calculator" className="hover:text-white">
+            Tools
           </Link>
           <Link href="/about" className="hover:text-white">
             About
