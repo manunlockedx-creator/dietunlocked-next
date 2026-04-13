@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/medical-disclaimer",
     "/medical-review-team",
     "/privacy-policy",
+    "/tools",
     "/tools/free-testosterone-calculator",
     "/tools/low-t-symptom-checker",
     "/tools/trt-cost-calculator",

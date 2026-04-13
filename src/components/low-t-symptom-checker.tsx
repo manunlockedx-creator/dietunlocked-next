@@ -74,14 +74,21 @@ export function LowTSymptomChecker() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-300">{result.label}</p>
         <p className="mt-3 text-lg leading-8 text-zinc-100">{result.text}</p>
         <p className="mt-2 text-sm text-zinc-400">Symptom score: {score} / 24</p>
-        <AffiliateLink
-          href={result.cta.href}
-          offer="symptom-checker"
-          sourcePage="/tools/low-t-symptom-checker"
-          className="mt-5 inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950"
-        >
-          {result.cta.label}
-        </AffiliateLink>
+        <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+          <AffiliateLink
+            href={result.cta.href}
+            offer="symptom-checker"
+            sourcePage="/tools/low-t-symptom-checker"
+            className="inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950"
+          >
+            {result.cta.label}
+          </AffiliateLink>
+          {score >= 16 ? (
+            <a href="/tools/trt-cost-calculator" className="inline-flex rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-zinc-100">
+              Compare true TRT costs
+            </a>
+          ) : null}
+        </div>
       </div>
     </section>
   );

@@ -166,6 +166,11 @@ export function FreeTestosteroneCalculator() {
                 {parsed.ctaLabel}
               </AffiliateLink>
             ) : null}
+            {(parsed.category === "low" || parsed.category === "lownormal") ? (
+              <a href="/tools/low-t-symptom-checker" className="rounded-full border border-white/15 px-5 py-3 text-center text-zinc-100">
+                Take the symptom checker
+              </a>
+            ) : null}
           </div>
         </div>
       ) : null}

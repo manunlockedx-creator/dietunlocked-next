@@ -22,23 +22,8 @@ export function SiteHeader() {
           <Link href="/blog" className="hover:text-white">
             Articles
           </Link>
-          <Link href="/tools/free-testosterone-calculator" className="hover:text-white">
-            Free T
-          </Link>
-          <Link href="/tools/low-t-symptom-checker" className="hover:text-white">
-            Symptom Quiz
-          </Link>
-          <Link href="/tools/trt-cost-calculator" className="hover:text-white">
-            TRT Cost
-          </Link>
-          <Link href="/tools/bioavailable-testosterone-calculator" className="hover:text-white">
-            Bioavailable T
-          </Link>
-          <Link href="/tools/testosterone-by-age-calculator" className="hover:text-white">
-            T by Age
-          </Link>
-          <Link href="/tools/tdee-calculator-men" className="hover:text-white">
-            TDEE
+          <Link href="/tools" className="hover:text-white">
+            Tools
           </Link>
           <Link href="/about" className="hover:text-white">
             About
