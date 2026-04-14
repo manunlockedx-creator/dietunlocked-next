@@ -24,7 +24,10 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   verification: {
-    google: "GccoXHnJ_6B2SZsRUjg-cs4UXf6cYJorC3EDVpQSzqI",
+    google: [
+      "GccoXHnJ_6B2SZsRUjg-cs4UXf6cYJorC3EDVpQSzqI",
+      "lVDoW35qs3Vu0vpY1_AUD90ddND-TDrS6FXbMp8ebBI",
+    ],
     other: {
       "impact-site-verification": "873674fe-4849-4c70-9523-1ced38dc94c6",
     },
