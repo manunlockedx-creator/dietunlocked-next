@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   verification: {
     google: "GccoXHnJ_6B2SZsRUjg-cs4UXf6cYJorC3EDVpQSzqI",
+    other: {
+      "impact-site-verification": "873674fe-4849-4c70-9523-1ced38dc94c6",
+    },
   },
 };
 
