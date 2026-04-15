@@ -43,18 +43,18 @@ export function Glp1MedicationCostComparisonCalculator() {
         <p className="mt-2 text-sm text-zinc-400">This is a simple compare view. Use it to decide which pathway (telehealth, pharmacy, insurance) fits your budget.</p>
       </div>
 
-      <div className="mt-6 prose max-w-none text-zinc-300">
+      <div className="article-content mt-8 rounded-[1.5rem] border border-white/10 bg-white/[0.02] px-6 py-8">
         <h2>How much does GLP-1 really cost in 2026?</h2>
-        <p>Direct answer: it depends on the route — pharmacy cash prices for semaglutide formulations often exceed $800–$1,200/month; telehealth packages vary ($200–$600/mo) and insurance OOP can be as low as $0–$100 depending on coverage.</p>
+        <p><strong>Direct answer:</strong> it depends on the route — pharmacy cash prices for semaglutide formulations often exceed $800–$1,200/month; telehealth packages vary ($200–$600/mo) and insurance OOP can be as low as $0–$100 depending on coverage.</p>
 
         <h2>Why the price range is so wide</h2>
-        <p>Direct answer: list price, manufacturer pricing, telehealth fees, lab work, and insurance coverage differences all produce a wide range. Telehealth sometimes bundles prescription + follow-up for one fee; pharmacies charge list price for the medication itself.</p>
+        <p><strong>Direct answer:</strong> list price, manufacturer pricing, telehealth fees, lab work, and insurance coverage differences all produce a wide range. Telehealth sometimes bundles prescription + follow-up for one fee; pharmacies charge list price for the medication itself.</p>
 
         <h2>How to use this tool</h2>
-        <p>Direct answer: replace the example numbers with your actual telehealth monthly fee, expected pharmacy cost, and likely insurance OOP to see which pathway is cheapest for you right now.</p>
+        <p><strong>Direct answer:</strong> replace the example numbers with your actual telehealth monthly fee, expected pharmacy cost, and likely insurance OOP to see which pathway is cheapest for you right now.</p>
 
         <h2>Where the data comes from</h2>
-        <p>Representative sources: telehealth pricing pages and published pharmacy list-price ranges; always check current pricing for your state and plan.</p>
+        <p><strong>Representative sources:</strong> telehealth pricing pages and published pharmacy list-price ranges; always check current pricing for your state and plan.</p>
       </div>
     </section>
   );

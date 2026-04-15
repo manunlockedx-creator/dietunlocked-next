@@ -135,18 +135,18 @@ export function Glp1CalorieCalculator() {
         <div className="mt-4 text-sm text-zinc-400">Methodology: Mifflin–St Jeor BMR × activity factor, then conservative deficit applied (15% default) to preserve lean mass while allowing steady loss on GLP-1 therapy.</div>
       </div>
 
-      <div className="mt-6 prose max-w-none text-zinc-300">
+      <div className="article-content mt-8 rounded-[1.5rem] border border-white/10 bg-white/[0.02] px-6 py-8">
         <h2>How many calories should you eat on GLP-1?</h2>
-        <p>Direct answer: it depends on your TDEE, but on GLP-1 we recommend a modest deficit (conservative: ~10–20%) rather than an aggressive cut — because appetite is already suppressed and lean-mass protection matters.</p>
+        <p><strong>Direct answer:</strong> it depends on your TDEE, but on GLP-1 we recommend a modest deficit (conservative: ~10–20%) rather than an aggressive cut — because appetite is already suppressed and lean-mass protection matters.</p>
 
         <h2>Why does the math change on GLP-1?</h2>
-        <p>Direct answer: GLP-1 reduces appetite and food volume tolerance. A too-aggressive target can lead to under-eating and unintended lean mass loss. That’s why conservative targets and higher protein are paired together.</p>
+        <p><strong>Direct answer:</strong> GLP-1 reduces appetite and food volume tolerance. A too-aggressive target can lead to under-eating and unintended lean mass loss. That’s why conservative targets and higher protein are paired together.</p>
 
         <h2>When should you raise your calorie target?</h2>
-        <p>Direct answer: bump calories if you’re losing strength, feeling faint, or if weight loss is faster than 2% body weight per week consistently — those can be signs you’re losing too much lean mass or not fueling recovery.</p>
+        <p><strong>Direct answer:</strong> bump calories if you’re losing strength, feeling faint, or if weight loss is faster than 2% body weight per week consistently — those can be signs you’re losing too much lean mass or not fueling recovery.</p>
 
         <h2>What the evidence says</h2>
-        <p>Representative sources: STEP trial semaglutide outcomes and body composition analyses; clinical guidance on safe calorie floors for adults during weight loss.</p>
+        <p><strong>Representative sources:</strong> STEP trial semaglutide outcomes and body composition analyses; clinical guidance on safe calorie floors for adults during weight loss.</p>
       </div>
     </section>
   );

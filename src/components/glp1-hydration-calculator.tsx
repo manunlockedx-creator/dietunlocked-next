@@ -53,12 +53,12 @@ export function Glp1HydrationCalculator() {
         <div className="mt-4 text-sm text-zinc-400">On GLP-1 medications thirst cues can be muted — schedule fluid intake and watch urine color. Increase fluids if you have heat or increased activity.</div>
       </div>
 
-      <div className="mt-6 prose max-w-none text-zinc-300">
+      <div className="article-content mt-8 rounded-[1.5rem] border border-white/10 bg-white/[0.02] px-6 py-8">
         <h2>How much water should someone on GLP-1 drink?</h2>
-        <p>Direct answer: aim for roughly 30–40 mL/kg as a starting point, then adjust up for activity, climate, and side effects like constipation.</p>
+        <p><strong>Direct answer:</strong> aim for roughly 30–40 mL/kg as a starting point, then adjust up for activity, climate, and side effects like constipation.</p>
 
         <h2>Why thirst signals can be unreliable on GLP-1</h2>
-        <p>Direct answer: GLP-1 medications can blunt appetite and thirst; that means scheduled sipping and urine color checks are better cues than waiting to feel thirsty.</p>
+        <p><strong>Direct answer:</strong> GLP-1 medications can blunt appetite and thirst; that means scheduled sipping and urine color checks are better cues than waiting to feel thirsty.</p>
 
         <h2>Practical tips</h2>
         <ul>

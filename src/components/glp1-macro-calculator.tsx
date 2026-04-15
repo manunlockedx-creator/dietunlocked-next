@@ -57,15 +57,15 @@ export function Glp1MacroCalculator() {
         </div>
       </div>
 
-      <div className="mt-6 prose max-w-none text-zinc-300">
+      <div className="article-content mt-8 rounded-[1.5rem] border border-white/10 bg-white/[0.02] px-6 py-8">
         <h2>What macro split is best on GLP-1?</h2>
-        <p>Direct answer: prioritize protein first, then adjust fats and carbs to meet calorie targets and personal tolerance. Many GLP-1 users find lower-carb, protein-focused meals easier to tolerate, but carbs are useful for energy and training.</p>
+        <p><strong>Direct answer:</strong> prioritize protein first, then adjust fats and carbs to meet calorie targets and personal tolerance. Many GLP-1 users find lower-carb, protein-focused meals easier to tolerate, but carbs are useful for energy and training.</p>
 
         <h2>How do you fit protein into tiny meals?</h2>
-        <p>Direct answer: distribute protein across small, frequent protein-dense items (yogurt, protein shakes, small eggs/cheese portions), and consider liquid or blended options when solids are poorly tolerated.</p>
+        <p><strong>Direct answer:</strong> distribute protein across small, frequent protein-dense items (yogurt, protein shakes, small eggs/cheese portions), and consider liquid or blended options when solids are poorly tolerated.</p>
 
         <h2>Why macros matter when appetite is low</h2>
-        <p>Direct answer: when calories are limited by appetite, prioritizing high-quality protein protects lean mass and makes every calorie count.</p>
+        <p><strong>Direct answer:</strong> when calories are limited by appetite, prioritizing high-quality protein protects lean mass and makes every calorie count.</p>
       </div>
     </section>
   );

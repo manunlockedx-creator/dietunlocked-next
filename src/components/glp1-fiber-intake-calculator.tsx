@@ -41,12 +41,12 @@ export function Glp1FiberIntakeCalculator() {
         <p className="text-sm text-zinc-300">Direct answer: based on a standard guideline (14 g per 1000 kcal), target about <strong>{recommended} g fiber/day</strong>. Prioritize soluble fiber and increase slowly to avoid worsening GI symptoms.</p>
       </div>
 
-      <div className="mt-6 prose max-w-none text-zinc-300">
+      <div className="article-content mt-8 rounded-[1.5rem] border border-white/10 bg-white/[0.02] px-6 py-8">
         <h2>How much fiber do GLP-1 users need?</h2>
-        <p>Direct answer: aim for about 14 g fiber per 1,000 kcal as a baseline, then adjust for symptoms and tolerance — many GLP-1 users need a gradual ramp to avoid constipation or bloating.</p>
+        <p><strong>Direct answer:</strong> aim for about 14 g fiber per 1,000 kcal as a baseline, then adjust for symptoms and tolerance — many GLP-1 users need a gradual ramp to avoid constipation or bloating.</p>
 
         <h2>What type of fiber is best?</h2>
-        <p>Direct answer: soluble fiber (oats, psyllium, fruits) is often gentler and better for managing stool consistency; increase fiber along with hydration to reduce constipation risk.</p>
+        <p><strong>Direct answer:</strong> soluble fiber (oats, psyllium, fruits) is often gentler and better for managing stool consistency; increase fiber along with hydration to reduce constipation risk.</p>
       </div>
     </section>
   );

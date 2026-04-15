@@ -73,15 +73,15 @@ export function Glp1WeightLossProjectionCalculator() {
         </div>
       </div>
 
-      <div className="mt-6 prose max-w-none text-zinc-300">
+      <div className="article-content mt-8 rounded-[1.5rem] border border-white/10 bg-white/[0.02] px-6 py-8">
         <h2>How much weight can you expect on GLP-1?</h2>
-        <p>Direct answer: trial averages vary by drug and dose — semaglutide trials report ~12–17% average loss at 68 weeks; tirzepatide trials report higher averages. This tool linearizes those percentages to provide a short-term projection.</p>
+        <p><strong>Direct answer:</strong> trial averages vary by drug and dose — semaglutide trials report ~12–17% average loss at 68 weeks; tirzepatide trials report higher averages. This tool linearizes those percentages to provide a short-term projection.</p>
 
         <h2>Why individual results vary</h2>
-        <p>Direct answer: baseline BMI, adherence, dose escalation, diet composition, and physical activity all shape outcomes. Use projections as a rough guide, not a promise.</p>
+        <p><strong>Direct answer:</strong> baseline BMI, adherence, dose escalation, diet composition, and physical activity all shape outcomes. Use projections as a rough guide, not a promise.</p>
 
         <h2>Where the numbers come from</h2>
-        <p>Representative sources: STEP trials for semaglutide and SURMOUNT trials for tirzepatide. These are averages — your mileage will vary.</p>
+        <p><strong>Representative sources:</strong> STEP trials for semaglutide and SURMOUNT trials for tirzepatide. These are averages — your mileage will vary.</p>
       </div>
     </section>
   );

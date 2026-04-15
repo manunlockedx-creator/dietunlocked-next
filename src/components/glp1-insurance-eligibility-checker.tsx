@@ -54,12 +54,12 @@ export function Glp1InsuranceEligibilityChecker() {
         <p className="mt-2 text-sm text-zinc-400">Note: actual coverage rules vary by insurer. This is meant as a quick pre-check, not an insurance determination.</p>
       </div>
 
-      <div className="mt-6 prose max-w-none text-zinc-300">
+      <div className="article-content mt-8 rounded-[1.5rem] border border-white/10 bg-white/[0.02] px-6 py-8">
         <h2>How do insurers usually decide who gets GLP-1 coverage?</h2>
-        <p>Direct answer: most common public criteria are BMI ≥30, or BMI ≥27 with specific weight-related comorbidities (type 2 diabetes, sleep apnea, etc.).</p>
+        <p><strong>Direct answer:</strong> most common public criteria are BMI ≥30, or BMI ≥27 with specific weight-related comorbidities (type 2 diabetes, sleep apnea, etc.).</p>
 
         <h2>What should you do next if you look eligible?</h2>
-        <p>Direct answer: get documentation of BMI and comorbidities from your clinician, check your plan’s prior authorization requirements, and compare telehealth programs if coverage is denied.</p>
+        <p><strong>Direct answer:</strong> get documentation of BMI and comorbidities from your clinician, check your plan’s prior authorization requirements, and compare telehealth programs if coverage is denied.</p>
       </div>
     </section>
   );
