@@ -12,7 +12,7 @@ export default function robots(): MetadataRoute.Robots {
 
   return {
     rules,
-    sitemap: "https://www.manunlocked.com/sitemap.xml",
-    host: "https://www.manunlocked.com",
+    sitemap: "https://www.dietunlocked.com/sitemap.xml",
+    host: "https://www.dietunlocked.com",
   };
 }

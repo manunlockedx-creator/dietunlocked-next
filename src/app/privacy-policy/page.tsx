@@ -1,20 +1,17 @@
-export const metadata = {
-  title: "Privacy Policy | ManUnlocked",
-  description: "How ManUnlocked handles analytics, form submissions, and reader privacy.",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | DietUnlocked",
+  description: "How DietUnlocked handles analytics, form submissions, and reader privacy.",
 };
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-6 py-16">
-      <h1 className="text-4xl font-semibold tracking-tight text-white">Privacy Policy</h1>
-      <div className="mt-6 space-y-5 text-lg leading-8 text-zinc-400">
-        <p>
-          We collect limited analytics and form submission data so the site can function, improve, and communicate
-          with readers who explicitly opt in.
-        </p>
-        <p>
-          We do not sell personal information. If you submit your email, it is used only for the newsletter or lead
-          magnet flow you requested.
+    <main className="mx-auto flex w-full max-w-4xl flex-1 flex-col px-6 py-16">
+      <div className="space-y-6">
+        <h1 className="text-4xl font-semibold tracking-tight text-white">Privacy Policy</h1>
+        <p className="text-lg leading-8 text-zinc-400">
+          DietUnlocked collects only the information needed to run the site, measure performance, and process voluntary email signups. A fuller policy will be published before launch.
         </p>
       </div>
     </main>

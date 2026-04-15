@@ -1,20 +1,32 @@
 export const siteConfig = {
-  name: "ManUnlocked",
-  url: "https://www.manunlocked.com",
+  name: "DietUnlocked",
+  url: "https://www.dietunlocked.com",
   description:
-    "Evidence-first men's health guidance, transparent reviews, and practical tools without the recycled marketing fluff.",
-  author: "ManUnlocked Editorial",
+    "Evidence-based nutrition for the GLP-1 era, with practical calculators, physician-reviewed explainers, and honest comparisons.",
+  author: "DietUnlocked Editorial",
+  tagline: "Evidence-Based Nutrition for the GLP-1 Era",
+  subtagline: "Your doctor prescribed the medication. We'll help you figure out what to eat.",
 };
 
 export const affiliateLinks = {
-  himsTrt: {
-    slug: "hims-trt",
-    href: "https://www.hims.com/",
-    label: "Hims TRT",
+  medvi: {
+    slug: "medvi",
+    href: "https://www.dietunlocked.com/go/medvi",
+    label: "MEDVi",
   },
-  fella: {
-    slug: "fella",
-    href: "https://www.joinfella.com/",
-    label: "Fella Health",
+  skinnyRx: {
+    slug: "skinnyrx",
+    href: "https://www.dietunlocked.com/go/skinnyrx",
+    label: "SkinnyRx",
+  },
+  shed: {
+    slug: "shed",
+    href: "https://www.dietunlocked.com/go/shed",
+    label: "SHED",
+  },
+  factor: {
+    slug: "factor",
+    href: "https://www.dietunlocked.com/go/factor",
+    label: "Factor Meals",
   },
 } as const;

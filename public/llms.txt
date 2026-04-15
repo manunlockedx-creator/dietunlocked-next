@@ -1,18 +1,18 @@
-# ManUnlocked.com
-> Independent men's health resource covering testosterone, TRT, ED treatment, and men's optimization. Physician-reviewed. Evidence-based.
+# DietUnlocked.com
+> Independent physician-reviewed nutrition resource for people on GLP-1 weight loss medications. Evidence-based dietary guidance for Ozempic, Wegovy, Zepbound, and Mounjaro users.
 
 ## Topics
-- Testosterone Replacement Therapy (TRT) clinic reviews and comparisons
-- Low testosterone symptoms, causes, and treatment options
-- Erectile dysfunction treatment comparisons
-- At-home hormone testing
-- Men's health optimization for men aged 30-55
+- GLP-1 nutrition and meal planning
+- Protein requirements and muscle preservation on GLP-1
+- GLP-1 side effect management through diet
+- GLP-1 telehealth program reviews and comparisons
+- GLP-1 medication cost comparisons and insurance eligibility
+- GLP-1 weight loss projections and clinical trial data
 
 ## Key Pages
-- [Why ManUnlocked Exists](https://www.manunlocked.com/why-manunlocked-exists)
-- [Does Stress Actually Lower Your Testosterone?](https://www.manunlocked.com/does-stress-lower-testosterone)
-- [Calculators Hub](https://www.manunlocked.com/calculators)
-- [Free Testosterone Calculator](https://www.manunlocked.com/calculators/free-testosterone-calculator)
+- [GLP-1 Protein Requirement Calculator](https://dietunlocked.com/calculators/glp1-protein-calculator)
+- [GLP-1 Calorie Calculator](https://dietunlocked.com/calculators/glp1-calorie-calculator)
+- [GLP-1 Medication Cost Comparison Calculator](https://dietunlocked.com/calculators/glp1-medication-cost-comparison-calculator)
 
 ## Medical Review
 All health content is reviewed by licensed medical professionals. See our Medical Review Team page.

@@ -1,57 +1,73 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
-const tools = [
+const calculators = [
   {
-    href: "/calculators/free-testosterone-calculator",
-    title: "Free Testosterone Calculator",
-    description: "Estimate free testosterone from total T, SHBG, and albumin using the Vermeulen equation.",
+    href: "/calculators/glp1-calorie-calculator",
+    title: "GLP-1 Calorie Calculator",
+    description: "Estimate a practical calorie target while using Ozempic, Wegovy, Zepbound, or Mounjaro.",
   },
   {
-    href: "/calculators/low-t-symptom-checker",
-    title: "Low T Symptom Checker",
-    description: "Score the most common symptoms and see whether proper testing is worth the next step.",
+    href: "/calculators/glp1-protein-calculator",
+    title: "GLP-1 Protein Requirement Calculator",
+    description: "Set a protein target designed to protect lean mass when appetite is low.",
   },
   {
-    href: "/calculators/trt-cost-calculator",
-    title: "TRT Cost Calculator",
-    description: "Compare the real annual cost of TRT once labs, meds, and follow-ups are included.",
+    href: "/calculators/glp1-medication-cost-comparison-calculator",
+    title: "GLP-1 Medication Cost Comparison Calculator",
+    description: "Compare insurance, telehealth, and cash-pay GLP-1 cost scenarios.",
   },
   {
-    href: "/calculators/bioavailable-testosterone-calculator",
-    title: "Bioavailable Testosterone Calculator",
-    description: "Estimate bioavailable testosterone when total T alone is not telling the full story.",
+    href: "/calculators/glp1-weight-loss-projection-calculator",
+    title: "GLP-1 Weight Loss Projection Calculator",
+    description: "Estimate realistic weight loss ranges by medication and timeline.",
   },
   {
-    href: "/calculators/testosterone-by-age-calculator",
-    title: "Testosterone by Age Calculator",
-    description: "See where your total testosterone roughly falls against age-band reference ranges.",
+    href: "/calculators/glp1-macro-calculator",
+    title: "GLP-1 Macro Calculator",
+    description: "Turn calorie and protein targets into a practical macro split.",
   },
   {
-    href: "/calculators/tdee-calculator-men",
-    title: "TDEE Calculator (Men’s Edition)",
-    description: "Estimate maintenance calories and use it to guide fat loss or lean gain decisions.",
+    href: "/calculators/glp1-hydration-calculator",
+    title: "GLP-1 Hydration Calculator",
+    description: "Estimate a hydration target when thirst signals feel unreliable.",
   },
-];
+  {
+    href: "/calculators/glp1-fiber-intake-calculator",
+    title: "GLP-1 Fiber Intake Calculator",
+    description: "Estimate a fiber target to support digestion and reduce constipation risk.",
+  },
+  {
+    href: "/calculators/glp1-insurance-eligibility-checker",
+    title: "GLP-1 Insurance Eligibility Checker",
+    description: "Estimate whether you may meet common GLP-1 coverage criteria.",
+  },
+] as const;
 
-export const metadata = {
-  title: "Calculators | ManUnlocked",
-  description: "Calculator hub for testosterone, TRT cost, symptoms, and body composition calculators.",
+export const metadata: Metadata = {
+  title: "Calculators | DietUnlocked",
+  description: "Calculator hub for GLP-1 nutrition, protein, hydration, cost, and planning tools.",
 };
 
-export default function ToolsHubPage() {
+export default function CalculatorsPage() {
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-6 py-16">
+    <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-6 py-16">
       <div className="max-w-3xl space-y-4">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-500">Calculators</p>
-        <h1 className="text-5xl font-semibold tracking-tight text-white">Every calculator in one place.</h1>
-        <p className="text-xl leading-8 text-zinc-400">Use the tool you need now, or move through them in sequence if you’re trying to make a smarter testosterone or body-composition decision.</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-300">Calculators</p>
+        <h1 className="text-5xl font-semibold tracking-tight text-white">GLP-1 tools that do real work</h1>
+        <p className="text-xl leading-8 text-zinc-400">
+          Use the tool you need now, or move through them in sequence if you&apos;re trying to make a smarter nutrition, cost, or medication-support decision.
+        </p>
       </div>
-      <div className="mt-10 grid gap-5">
-        {tools.map((tool) => (
-          <article key={tool.href} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-            <h2 className="text-2xl font-semibold text-white">{tool.title}</h2>
-            <p className="mt-3 text-base leading-7 text-zinc-400">{tool.description}</p>
-            <Link href={tool.href} className="mt-4 inline-flex text-sm font-semibold text-amber-400">Open calculator →</Link>
+
+      <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {calculators.map((calculator) => (
+          <article key={calculator.href} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
+            <h2 className="text-2xl font-semibold text-white">{calculator.title}</h2>
+            <p className="mt-3 text-sm leading-7 text-zinc-400">{calculator.description}</p>
+            <Link href={calculator.href} className="mt-4 inline-flex text-sm font-semibold text-emerald-300">
+              Open calculator →
+            </Link>
           </article>
         ))}
       </div>

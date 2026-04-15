@@ -32,7 +32,7 @@ export function ArticleSchema({
     },
     publisher: {
       "@type": "Organization",
-      name: "ManUnlocked",
+      name: "DietUnlocked",
     },
     mainEntityOfPage: url,
     image: image ? [image] : undefined,

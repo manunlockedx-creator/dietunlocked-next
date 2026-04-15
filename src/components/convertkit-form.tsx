@@ -38,12 +38,12 @@ export function ConvertKitForm() {
 
   return (
     <form onSubmit={handleSubmit} className="rounded-[2rem] border border-zinc-200 bg-white p-6 shadow-sm">
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">Email signup</p>
+      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">Email signup</p>
       <h2 className="mt-3 text-2xl font-semibold tracking-tight text-zinc-950">
-        Get the no-BS men&apos;s health briefing.
+        Get the free 7-day GLP-1 meal plan.
       </h2>
       <p className="mt-3 text-base leading-7 text-zinc-600">
-        Research-backed breakdowns, useful tools, and zero fake urgency.
+        High-protein meal ideas, grocery guidance, and practical nutrition help for people using GLP-1 medications.
       </p>
       <div className="mt-5 flex flex-col gap-3 sm:flex-row">
         <input

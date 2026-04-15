@@ -1,19 +1,14 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export function SiteHeader() {
   return (
-    <header className="border-b border-white/10 bg-[#05070a]/90 backdrop-blur">
+    <header className="border-b border-white/10 bg-[#0b120e]/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        <Link href="/" className="flex items-center">
-          <Image
-            src="/manunlocked-wordmark.png"
-            alt="ManUnlocked"
-            width={24}
-            height={24}
-            priority
-            className="h-6 w-6 rounded-sm object-contain"
-          />
+        <Link href="/" className="flex items-center gap-3 text-white">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/20 text-sm font-semibold text-emerald-300">
+            D
+          </div>
+          <span className="text-sm font-semibold tracking-[0.2em] uppercase text-zinc-100">DietUnlocked</span>
         </Link>
         <nav className="flex items-center gap-5 text-sm font-medium text-zinc-400">
           <Link href="/" className="hover:text-white">
