@@ -3,7 +3,7 @@ import { Glp1WeightLossProjectionCalculator } from "@/components/glp1-weight-los
 
 export const metadata: Metadata = {
   title: "GLP-1 Weight Loss Projection Calculator | DietUnlocked",
-  description: "Estimate realistic GLP-1 weight loss ranges by medication and timeline.",
+  description: "Estimate realistic GLP-1 weight loss ranges based on medication type, starting body weight, and timeline.",
 };
 
 export default function Page() {
