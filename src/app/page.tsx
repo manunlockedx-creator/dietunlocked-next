@@ -36,7 +36,7 @@ export default function Home() {
       <section className="space-y-12">
         <div className="space-y-4 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-600">DietUnlocked</p>
-          <h1 className="mx-auto max-w-5xl bg-gradient-to-r from-zinc-950 via-zinc-800 to-emerald-600 bg-clip-text text-5xl font-semibold tracking-tight text-transparent sm:text-6xl">
+          <h1 className="mx-auto max-w-5xl bg-gradient-to-r from-[#c9f6d4] via-[#7be495] to-[#34d399] bg-clip-text text-5xl font-semibold tracking-tight text-transparent sm:text-6xl">
             {siteConfig.tagline}
           </h1>
           <p className="mx-auto max-w-3xl text-2xl leading-8 text-zinc-700">{siteConfig.subtagline}</p>
