@@ -1,8 +1,6 @@
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-XBRQY63MHT";
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "";
 
 export function trackEventScript() {
-  if (!GA_MEASUREMENT_ID) return "";
-
   return `
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -10,4 +8,20 @@ export function trackEventScript() {
     gtag('js', new Date());
     gtag('config', '${GA_MEASUREMENT_ID}');
   `;
+}
+
+export function pageview(url: string) {
+  if (typeof window === "undefined" || !window.gtag || !GA_MEASUREMENT_ID) {
+    return;
+  }
+
+  window.gtag("config", GA_MEASUREMENT_ID, {
+    page_path: url,
+  });
+}
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
 }
