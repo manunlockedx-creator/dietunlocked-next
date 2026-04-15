@@ -15,18 +15,11 @@ export function Glp1ProteinCalculator() {
   let baseLow = 1.2;
   let baseHigh = 1.6;
 
-  const activityFactor = {
-    sedentary: 1.0,
-    light: 1.05,
-    moderate: 1.1,
-    active: 1.2,
-  }[activity];
+  const activityMap = { sedentary: 1.0, light: 1.05, moderate: 1.1, active: 1.2 } as const;
+  const medMap = { low: 0.95, standard: 1.0, high: 1.05 } as const;
 
-  const medFactor = {
-    low: 0.95,
-    standard: 1.0,
-    high: 1.05,
-  }[medIntensity];
+  const activityFactor = activityMap[activity as keyof typeof activityMap] ?? 1.0;
+  const medFactor = medMap[medIntensity as keyof typeof medMap] ?? 1.0;
 
   const lowG = Math.round(baseLow * activityFactor * medFactor * weightKg);
   const highG = Math.round(baseHigh * activityFactor * medFactor * weightKg);
