@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -57,17 +58,29 @@ export default async function ArticlePage({ params }: PageProps) {
         faq={frontmatter.faq}
       />
 
-      <article className="mx-auto w-full max-w-[720px]">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-500">
+      <article className="mx-auto w-full max-w-[760px] rounded-[2rem] border border-black/5 bg-white px-8 py-10 shadow-[0_20px_60px_rgba(15,23,42,0.06)]">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
           {frontmatter.category}
         </p>
-        <h1 className="mt-3 text-5xl font-semibold leading-tight text-white">{frontmatter.title}</h1>
-        <p className="mt-5 text-xl leading-8 text-zinc-400">{frontmatter.excerpt}</p>
+        <h1 className="mt-3 text-5xl font-semibold leading-tight text-zinc-950">{frontmatter.title}</h1>
+        <p className="mt-5 text-xl leading-8 text-zinc-600">{frontmatter.excerpt}</p>
         <div className="mt-5 flex flex-wrap items-center gap-2 text-sm text-zinc-500">
           <span>Published {new Date(frontmatter.publishDate).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
           {frontmatter.medicalReviewer ? <span aria-hidden="true">·</span> : null}
           {frontmatter.medicalReviewer ? <span>Medical review: {frontmatter.medicalReviewer}</span> : null}
         </div>
+        {frontmatter.featuredImage ? (
+          <div className="mt-8 overflow-hidden rounded-[1.75rem] border border-black/5 bg-zinc-50">
+            <Image
+              src={frontmatter.featuredImage}
+              alt={frontmatter.featuredImageAlt ?? frontmatter.title}
+              width={1600}
+              height={900}
+              className="h-auto w-full object-cover"
+              priority
+            />
+          </div>
+        ) : null}
         <div className="article-content mt-10 max-w-none">
           <MDXRemote source={content} options={{ mdxOptions: { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] } }} />
         </div>
