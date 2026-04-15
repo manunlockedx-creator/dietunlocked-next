@@ -27,33 +27,33 @@ export function Glp1ProteinCalculator() {
   const perMeal3 = [Math.round(lowG / 3), Math.round(highG / 3)];
 
   return (
-    <section className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/20">
-      <h1 className="text-3xl font-semibold tracking-tight text-white">GLP-1 Protein Requirement Calculator</h1>
+    <section className="rounded-[2rem] border border-black/5 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.06)]">
+      <h1 className="text-3xl font-semibold tracking-tight text-zinc-950">GLP-1 Protein Requirement Calculator</h1>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
         <label className="flex flex-col">
-          <span className="text-sm text-zinc-400">Unit</span>
-          <select value={unit} onChange={(e) => setUnit(e.target.value)} className="mt-2 rounded-md bg-black/10 px-3 py-2 text-white">
+          <span className="text-sm text-zinc-600">Unit</span>
+          <select value={unit} onChange={(e) => setUnit(e.target.value)} className="mt-2 rounded-xl border border-black/5 bg-zinc-50 px-3 py-2 text-zinc-950 focus:border-emerald-500 focus:outline-none">
             <option value="lb">Pounds (lb)</option>
             <option value="kg">Kilograms (kg)</option>
           </select>
         </label>
 
         <label className="flex flex-col">
-          <span className="text-sm text-zinc-400">Weight ({unit})</span>
+          <span className="text-sm text-zinc-600">Weight ({unit})</span>
           <input
             type="number"
             value={weight}
             min={30}
             max={600}
             onChange={(e) => setWeight(Number(e.target.value))}
-            className="mt-2 rounded-md bg-black/10 px-3 py-2 text-white"
+            className="mt-2 rounded-xl border border-black/5 bg-zinc-50 px-3 py-2 text-zinc-950 focus:border-emerald-500 focus:outline-none"
           />
         </label>
 
         <label className="flex flex-col">
-          <span className="text-sm text-zinc-400">Activity level</span>
-          <select value={activity} onChange={(e) => setActivity(e.target.value)} className="mt-2 rounded-md bg-black/10 px-3 py-2 text-white">
+          <span className="text-sm text-zinc-600">Activity level</span>
+          <select value={activity} onChange={(e) => setActivity(e.target.value)} className="mt-2 rounded-xl border border-black/5 bg-zinc-50 px-3 py-2 text-zinc-950 focus:border-emerald-500 focus:outline-none">
             <option value="sedentary">Sedentary</option>
             <option value="light">Light activity</option>
             <option value="moderate">Moderate activity</option>
@@ -62,8 +62,8 @@ export function Glp1ProteinCalculator() {
         </label>
 
         <label className="flex flex-col">
-          <span className="text-sm text-zinc-400">Medication intensity</span>
-          <select value={medIntensity} onChange={(e) => setMedIntensity(e.target.value)} className="mt-2 rounded-md bg-black/10 px-3 py-2 text-white">
+          <span className="text-sm text-zinc-600">Medication intensity</span>
+          <select value={medIntensity} onChange={(e) => setMedIntensity(e.target.value)} className="mt-2 rounded-xl border border-black/5 bg-zinc-50 px-3 py-2 text-zinc-950 focus:border-emerald-500 focus:outline-none">
             <option value="low">Low dose / early titration</option>
             <option value="standard">Typical maintenance</option>
             <option value="high">High dose / aggressive loss</option>
@@ -71,28 +71,28 @@ export function Glp1ProteinCalculator() {
         </label>
       </div>
 
-      <div className="mt-6 rounded-lg bg-black/10 p-5">
-        <p className="text-sm text-zinc-300">Direct answer: For someone on GLP-1, aim for about {lowG}–{highG} g of protein per day ({(Math.round(((lowG+highG)/2) * 10)/10)} g avg). That’s roughly {perMeal3[0]}–{perMeal3[1]} g per meal if you eat three times a day.</p>
+      <div className="mt-6 rounded-lg bg-zinc-100 border border-black/5 p-5">
+        <p className="text-sm text-zinc-700">Direct answer: For someone on GLP-1, aim for about {lowG}–{highG} g of protein per day ({(Math.round(((lowG+highG)/2) * 10)/10)} g avg). That’s roughly {perMeal3[0]}–{perMeal3[1]} g per meal if you eat three times a day.</p>
 
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <div>
-            <p className="text-xs text-zinc-400">Recommended daily protein range</p>
-            <div className="mt-1 text-2xl font-semibold text-white">{lowG}–{highG} g/day</div>
+            <p className="text-xs text-zinc-600">Recommended daily protein range</p>
+            <div className="mt-1 text-2xl font-semibold text-zinc-950">{lowG}–{highG} g/day</div>
           </div>
 
           <div>
-            <p className="text-xs text-zinc-400">Per-meal target (3 meals)</p>
-            <div className="mt-1 text-2xl font-semibold text-white">{perMeal3[0]}–{perMeal3[1]} g/meal</div>
+            <p className="text-xs text-zinc-600">Per-meal target (3 meals)</p>
+            <div className="mt-1 text-2xl font-semibold text-zinc-950">{perMeal3[0]}–{perMeal3[1]} g/meal</div>
           </div>
         </div>
 
-        <div className="mt-4 text-sm text-zinc-400">
+        <div className="mt-4 text-sm text-zinc-600">
           <p className="mb-2">Methodology: clinical guidance for GLP-1 users commonly recommends 1.2–1.6 g/kg/day to protect lean mass; this calculator multiplies that range by activity and medication intensity adjustments to produce a realistic target.</p>
           <p><strong>Sources:</strong> STEP trials and clinical guidance on lean mass preservation.</p>
         </div>
       </div>
 
-      <div className="article-content mt-8 rounded-[1.5rem] border border-white/10 bg-white/[0.02] px-6 py-8">
+      <div className="article-content mt-8 rounded-[1.5rem] border border-black/5 bg-white px-6 py-8">
         <h2>How much protein do you actually need on GLP-1?</h2>
         <p><strong>Direct answer:</strong> more than the standard 0.8 g/kg recommendation — typically 1.2–1.6 g/kg is used in clinical guidance for people at risk of lean mass loss during weight loss on GLP-1 medications.</p>
         <p><strong>Why:</strong> clinical trial data show a non-trivial portion of weight lost on semaglutide can be lean mass, so a higher protein target helps protect muscle when overall intake is reduced.</p>

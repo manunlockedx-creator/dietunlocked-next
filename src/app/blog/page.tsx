@@ -19,9 +19,9 @@ export default function BlogPage() {
   return (
     <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-6 py-16">
       <div className="max-w-3xl space-y-4">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-300">Library</p>
-        <h1 className="text-5xl font-semibold tracking-tight text-white">DietUnlocked Library</h1>
-        <p className="text-xl leading-8 text-zinc-400">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">Library</p>
+        <h1 className="text-5xl font-semibold tracking-tight text-zinc-950">DietUnlocked Library</h1>
+        <p className="text-xl leading-8 text-zinc-600">
           Evidence-based GLP-1 nutrition articles, practical food guidance, and decision-focused comparisons.
         </p>
       </div>
@@ -29,19 +29,19 @@ export default function BlogPage() {
       <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {articles.length > 0 ? (
           articles.map(({ frontmatter }) => (
-            <article key={frontmatter.slug} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
+            <article key={frontmatter.slug} className="rounded-[1.5rem] border border-black/5 bg-white p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
                 {categoryLabels[frontmatter.category] ?? frontmatter.category}
               </p>
-              <h2 className="mt-3 text-2xl font-semibold text-white">{frontmatter.title}</h2>
-              <p className="mt-3 text-sm leading-7 text-zinc-400">{frontmatter.excerpt}</p>
-              <Link href={`/${frontmatter.slug}`} className="mt-4 inline-flex text-sm font-semibold text-emerald-300">
+              <h2 className="mt-3 text-2xl font-semibold text-zinc-950">{frontmatter.title}</h2>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">{frontmatter.excerpt}</p>
+              <Link href={`/${frontmatter.slug}`} className="mt-4 inline-flex text-sm font-semibold text-emerald-600">
                 Read more →
               </Link>
             </article>
           ))
         ) : (
-          <div className="rounded-[1.5rem] border border-dashed border-white/10 bg-white/5 p-6 text-sm leading-7 text-zinc-500 md:col-span-2 xl:col-span-3">
+          <div className="rounded-[1.5rem] border border-dashed border-black/5 bg-white p-6 text-sm leading-7 text-zinc-500 md:col-span-2 xl:col-span-3">
             Published articles will appear here as the DietUnlocked library goes live.
           </div>
         )}

@@ -5,7 +5,7 @@ export function SiteHeader() {
     <header className="border-b border-black/5 bg-white/85 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         <Link href="/" className="flex items-center gap-3 text-zinc-950">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-900 text-sm font-semibold text-white shadow-sm">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-sm font-semibold text-white shadow-sm">
             D
           </div>
           <span className="text-sm font-semibold tracking-[0.2em] uppercase text-zinc-900">DietUnlocked</span>

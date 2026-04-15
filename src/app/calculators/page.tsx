@@ -53,19 +53,19 @@ export default function CalculatorsPage() {
   return (
     <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-6 py-16">
       <div className="max-w-3xl space-y-4">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-300">Calculators</p>
-        <h1 className="text-5xl font-semibold tracking-tight text-white">GLP-1 tools that do real work</h1>
-        <p className="text-xl leading-8 text-zinc-400">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">Calculators</p>
+        <h1 className="text-5xl font-semibold tracking-tight text-zinc-950">GLP-1 tools that do real work</h1>
+        <p className="text-xl leading-8 text-zinc-600">
           Use the tool you need now, or move through them in sequence if you&apos;re trying to make a smarter nutrition, cost, or medication-support decision.
         </p>
       </div>
 
       <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {calculators.map((calculator) => (
-          <article key={calculator.href} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-            <h2 className="text-2xl font-semibold text-white">{calculator.title}</h2>
-            <p className="mt-3 text-sm leading-7 text-zinc-400">{calculator.description}</p>
-            <Link href={calculator.href} className="mt-4 inline-flex text-sm font-semibold text-emerald-300">
+          <article key={calculator.href} className="rounded-[1.5rem] border border-black/5 bg-white p-6">
+            <h2 className="text-2xl font-semibold text-zinc-950">{calculator.title}</h2>
+            <p className="mt-3 text-sm leading-7 text-zinc-600">{calculator.description}</p>
+            <Link href={calculator.href} className="mt-4 inline-flex text-sm font-semibold text-emerald-600">
               Open calculator →
             </Link>
           </article>

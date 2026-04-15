@@ -57,7 +57,7 @@ export function ConvertKitForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="rounded-full bg-zinc-950 px-5 py-3 text-sm font-semibold text-white disabled:opacity-60"
+          className="rounded-full bg-emerald-600 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-700 disabled:opacity-60"
         >
           {status === "loading" ? "Submitting..." : "Join free"}
         </button>

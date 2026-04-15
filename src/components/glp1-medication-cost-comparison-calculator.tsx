@@ -18,32 +18,32 @@ export function Glp1MedicationCostComparisonCalculator() {
   const total = programs.reduce((s, p) => s + p.cost, 0);
 
   return (
-    <section className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/20">
-      <h1 className="text-3xl font-semibold tracking-tight text-white">GLP-1 Medication Cost Comparison</h1>
+    <section className="rounded-[2rem] border border-black/5 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.06)]">
+      <h1 className="text-3xl font-semibold tracking-tight text-zinc-950">GLP-1 Medication Cost Comparison</h1>
 
-      <p className="mt-4 text-sm text-zinc-300">Direct answer: costs vary widely. Use this quick comparer to see telehealth vs pharmacy vs insurance out-of-pocket scenarios for a monthly snapshot.</p>
+      <p className="mt-4 text-sm text-zinc-700">Direct answer: costs vary widely. Use this quick comparer to see telehealth vs pharmacy vs insurance out-of-pocket scenarios for a monthly snapshot.</p>
 
       <div className="mt-6 space-y-4">
         {programs.map((p) => (
           <div key={p.id} className="flex items-center gap-3">
-            <label className="flex-1 text-sm text-zinc-300">{p.label}</label>
+            <label className="flex-1 text-sm text-zinc-700">{p.label}</label>
             <input
               type="number"
               value={p.cost}
               onChange={(e) => updateCost(p.id, Number(e.target.value))}
-              className="w-36 rounded-md bg-black/10 px-3 py-2 text-white"
+              className="w-36 rounded-xl border border-black/5 bg-zinc-50 px-3 py-2 text-zinc-950 focus:border-emerald-500 focus:outline-none"
             />
           </div>
         ))}
       </div>
 
-      <div className="mt-6 rounded-lg bg-black/10 p-5">
-        <p className="text-sm text-zinc-300">Estimated monthly cost snapshot</p>
-        <div className="mt-2 text-2xl font-semibold text-white">${total.toLocaleString()}</div>
-        <p className="mt-2 text-sm text-zinc-400">This is a simple compare view. Use it to decide which pathway (telehealth, pharmacy, insurance) fits your budget.</p>
+      <div className="mt-6 rounded-lg bg-zinc-100 border border-black/5 p-5">
+        <p className="text-sm text-zinc-700">Estimated monthly cost snapshot</p>
+        <div className="mt-2 text-2xl font-semibold text-zinc-950">${total.toLocaleString()}</div>
+        <p className="mt-2 text-sm text-zinc-600">This is a simple compare view. Use it to decide which pathway (telehealth, pharmacy, insurance) fits your budget.</p>
       </div>
 
-      <div className="article-content mt-8 rounded-[1.5rem] border border-white/10 bg-white/[0.02] px-6 py-8">
+      <div className="article-content mt-8 rounded-[1.5rem] border border-black/5 bg-white px-6 py-8">
         <h2>How much does GLP-1 really cost in 2026?</h2>
         <p><strong>Direct answer:</strong> it depends on the route — pharmacy cash prices for semaglutide formulations often exceed $800–$1,200/month; telehealth packages vary ($200–$600/mo) and insurance OOP can be as low as $0–$100 depending on coverage.</p>
 

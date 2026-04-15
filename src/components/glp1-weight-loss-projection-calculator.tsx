@@ -27,31 +27,31 @@ export function Glp1WeightLossProjectionCalculator() {
   const targetHigh = Math.round((weight - highLoss) * 10) / 10;
 
   return (
-    <section className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/20">
-      <h1 className="text-3xl font-semibold tracking-tight text-white">GLP-1 Weight Loss Projection</h1>
+    <section className="rounded-[2rem] border border-black/5 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.06)]">
+      <h1 className="text-3xl font-semibold tracking-tight text-zinc-950">GLP-1 Weight Loss Projection</h1>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
         <label className="flex flex-col">
-          <span className="text-sm text-zinc-400">Unit</span>
-          <select value={unit} onChange={(e) => setUnit(e.target.value)} className="mt-2 rounded-md bg-black/10 px-3 py-2 text-white">
+          <span className="text-sm text-zinc-600">Unit</span>
+          <select value={unit} onChange={(e) => setUnit(e.target.value)} className="mt-2 rounded-xl border border-black/5 bg-zinc-50 px-3 py-2 text-zinc-950 focus:border-emerald-500 focus:outline-none">
             <option value="lb">lb</option>
             <option value="kg">kg</option>
           </select>
         </label>
 
         <label className="flex flex-col">
-          <span className="text-sm text-zinc-400">Starting weight ({unit})</span>
-          <input type="number" value={weight} onChange={(e) => setWeight(Number(e.target.value))} className="mt-2 rounded-md bg-black/10 px-3 py-2 text-white" />
+          <span className="text-sm text-zinc-600">Starting weight ({unit})</span>
+          <input type="number" value={weight} onChange={(e) => setWeight(Number(e.target.value))} className="mt-2 rounded-xl border border-black/5 bg-zinc-50 px-3 py-2 text-zinc-950 focus:border-emerald-500 focus:outline-none" />
         </label>
 
         <label className="flex flex-col">
-          <span className="text-sm text-zinc-400">Weeks</span>
-          <input type="number" value={weeks} min={4} max={104} onChange={(e) => setWeeks(Number(e.target.value))} className="mt-2 rounded-md bg-black/10 px-3 py-2 text-white" />
+          <span className="text-sm text-zinc-600">Weeks</span>
+          <input type="number" value={weeks} min={4} max={104} onChange={(e) => setWeeks(Number(e.target.value))} className="mt-2 rounded-xl border border-black/5 bg-zinc-50 px-3 py-2 text-zinc-950 focus:border-emerald-500 focus:outline-none" />
         </label>
 
         <label className="flex flex-col sm:col-span-2">
-          <span className="text-sm text-zinc-400">Medication</span>
-          <select value={drug} onChange={(e) => setDrug(e.target.value)} className="mt-2 rounded-md bg-black/10 px-3 py-2 text-white">
+          <span className="text-sm text-zinc-600">Medication</span>
+          <select value={drug} onChange={(e) => setDrug(e.target.value)} className="mt-2 rounded-xl border border-black/5 bg-zinc-50 px-3 py-2 text-zinc-950 focus:border-emerald-500 focus:outline-none">
             {Object.entries(drugProfiles).map(([key, p]) => (
               <option key={key} value={key}>{p.label}</option>
             ))}
@@ -59,21 +59,21 @@ export function Glp1WeightLossProjectionCalculator() {
         </label>
       </div>
 
-      <div className="mt-6 rounded-lg bg-black/10 p-5">
-        <p className="text-sm text-zinc-300">Direct answer: projected weight after {weeks} weeks on {profile.label} is approximately <strong>{targetHigh}–{targetLow} {unit}</strong> (range based on trial averages).</p>
+      <div className="mt-6 rounded-lg bg-zinc-100 border border-black/5 p-5">
+        <p className="text-sm text-zinc-700">Direct answer: projected weight after {weeks} weeks on {profile.label} is approximately <strong>{targetHigh}–{targetLow} {unit}</strong> (range based on trial averages).</p>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <div>
-            <p className="text-xs text-zinc-400">Estimated weight loss (range)</p>
-            <div className="mt-1 text-2xl font-semibold text-white">{lowLoss}–{highLoss} {unit}</div>
+            <p className="text-xs text-zinc-600">Estimated weight loss (range)</p>
+            <div className="mt-1 text-2xl font-semibold text-zinc-950">{lowLoss}–{highLoss} {unit}</div>
           </div>
           <div>
-            <p className="text-xs text-zinc-400">Projected weight</p>
-            <div className="mt-1 text-2xl font-semibold text-white">{targetHigh}–{targetLow} {unit}</div>
+            <p className="text-xs text-zinc-600">Projected weight</p>
+            <div className="mt-1 text-2xl font-semibold text-zinc-950">{targetHigh}–{targetLow} {unit}</div>
           </div>
         </div>
       </div>
 
-      <div className="article-content mt-8 rounded-[1.5rem] border border-white/10 bg-white/[0.02] px-6 py-8">
+      <div className="article-content mt-8 rounded-[1.5rem] border border-black/5 bg-white px-6 py-8">
         <h2>How much weight can you expect on GLP-1?</h2>
         <p><strong>Direct answer:</strong> trial averages vary by drug and dose — semaglutide trials report ~12–17% average loss at 68 weeks; tirzepatide trials report higher averages. This tool linearizes those percentages to provide a short-term projection.</p>
 
